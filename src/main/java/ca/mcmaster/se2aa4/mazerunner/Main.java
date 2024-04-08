@@ -14,11 +14,12 @@ public class Main {
     public static void main(String[] args) {
         logger.info("** Starting Maze Runner");
         CommandLineParser parser = new DefaultParser();
-
-        CommandLine cmd = null;
         try {
-            cmd = parser.parse(getParserOptions(), args);
-            String filePath = cmd.getOptionValue('i');
+            CommandLine cmd = parser.parse(getParserOptions(), args);
+            String filePath = cmd.getOptionValue("i");
+            String method = cmd.getOptionValue("method", "righthand");
+            String baselineMethod = cmd.getOptionValue("baseline");
+
             Maze maze = new Maze(filePath);
 
             if (cmd.getOptionValue("p") != null) {
@@ -30,14 +31,27 @@ public class Main {
                     System.out.println("incorrect path");
                 }
             } else {
-                String method = cmd.getOptionValue("method", "righthand");
+                long startTime = System.currentTimeMillis();
                 Path path = solveMaze(method, maze);
+                long methodTime = System.currentTimeMillis() - startTime;
+
                 System.out.println(path.getFactorizedForm());
+                System.out.printf("Time spent with %s method: %.2f ms\n", method, (double)methodTime);
+
+                if (baselineMethod != null) {
+                    startTime = System.currentTimeMillis();
+                    Path baselinePath = solveMaze(baselineMethod, maze);
+                    long baselineTime = System.currentTimeMillis() - startTime;
+
+                    System.out.printf("Time spent with %s method: %.2f ms\n", baselineMethod, (double)baselineTime);
+
+                    double speedup = (double) baselinePath.getPathSteps().size() / path.getPathSteps().size();
+                    System.out.printf("Speedup: %.2f\n", speedup);
+                }
             }
         } catch (Exception e) {
-            System.err.println("MazeSolver failed.  Reason: " + e.getMessage());
-            logger.error("MazeSolver failed.  Reason: " + e.getMessage());
-            logger.error("PATH NOT COMPUTED");
+            System.err.println("MazeSolver failed. Reason: " + e.getMessage());
+            logger.error("MazeSolver failed. Reason: " + e.getMessage());
         }
 
         logger.info("End of MazeRunner");
@@ -89,6 +103,7 @@ public class Main {
 
         options.addOption(new Option("p", true, "Path to be verified in maze"));
         options.addOption(new Option("method", true, "Specify which path computation algorithm will be used"));
+        options.addOption("baseline", true, "Baseline method for comparison");
 
         return options;
     }
