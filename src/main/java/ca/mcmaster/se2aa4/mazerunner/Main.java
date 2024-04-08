@@ -1,5 +1,8 @@
 package ca.mcmaster.se2aa4.mazerunner;
 
+import ca.mcmaster.se2aa4.mazerunner.Algorithms.BFSSolver;
+import ca.mcmaster.se2aa4.mazerunner.Algorithms.RightHandSolver;
+import ca.mcmaster.se2aa4.mazerunner.Algorithms.TremauxSolver;
 import org.apache.commons.cli.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -58,6 +61,10 @@ public class Main {
             case "tremaux" -> {
                 logger.debug("Tremaux algorithm chosen.");
                 solver = new TremauxSolver();
+            }
+            case "BFS" -> {
+                logger.debug("Breadth First Search chosen.");
+                solver = new BFSSolver();
             }
             default -> {
                 throw new Exception("Maze solving method '" + method + "' not supported.");
