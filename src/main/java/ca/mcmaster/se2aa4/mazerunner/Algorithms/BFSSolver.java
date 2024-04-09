@@ -1,11 +1,10 @@
 package ca.mcmaster.se2aa4.mazerunner.Algorithms;
 
 import ca.mcmaster.se2aa4.mazerunner.GraphParameters.PathBuilder;
-import ca.mcmaster.se2aa4.mazerunner.Maze;
-import ca.mcmaster.se2aa4.mazerunner.MazeSolver;
-import ca.mcmaster.se2aa4.mazerunner.Path;
-import ca.mcmaster.se2aa4.mazerunner.Position;
-import ca.mcmaster.se2aa4.mazerunner.utils.Converter;
+import ca.mcmaster.se2aa4.mazerunner.Parameters.Maze;
+import ca.mcmaster.se2aa4.mazerunner.Solver.MazeSolver;
+import ca.mcmaster.se2aa4.mazerunner.Parameters.Path;
+import ca.mcmaster.se2aa4.mazerunner.Parameters.Position;
 import ca.mcmaster.se2aa4.mazerunner.GraphParameters.Node;
 
 import java.util.*;

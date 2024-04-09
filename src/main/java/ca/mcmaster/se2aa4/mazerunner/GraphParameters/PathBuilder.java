@@ -1,8 +1,8 @@
 package ca.mcmaster.se2aa4.mazerunner.GraphParameters;
 
-import ca.mcmaster.se2aa4.mazerunner.Direction;
-import ca.mcmaster.se2aa4.mazerunner.Path;
-import ca.mcmaster.se2aa4.mazerunner.Position;
+import ca.mcmaster.se2aa4.mazerunner.Parameters.Direction;
+import ca.mcmaster.se2aa4.mazerunner.Parameters.Path;
+import ca.mcmaster.se2aa4.mazerunner.Parameters.Position;
 
 import java.util.LinkedList;
 
