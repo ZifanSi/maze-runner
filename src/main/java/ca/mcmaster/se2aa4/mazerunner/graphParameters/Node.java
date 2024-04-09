@@ -1,4 +1,4 @@
-package ca.mcmaster.se2aa4.mazerunner.GraphParameters;
+package ca.mcmaster.se2aa4.mazerunner.graphParameters;
 
 import java.util.Objects;
 

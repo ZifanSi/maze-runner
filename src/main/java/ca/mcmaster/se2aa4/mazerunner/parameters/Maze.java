@@ -1,4 +1,4 @@
-package ca.mcmaster.se2aa4.mazerunner.Parameters;
+package ca.mcmaster.se2aa4.mazerunner.parameters;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

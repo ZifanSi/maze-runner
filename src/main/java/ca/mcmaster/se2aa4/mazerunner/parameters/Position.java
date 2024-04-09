@@ -1,4 +1,4 @@
-package ca.mcmaster.se2aa4.mazerunner.Parameters;
+package ca.mcmaster.se2aa4.mazerunner.parameters;
 
 public record Position(int x, int y) {
     /**

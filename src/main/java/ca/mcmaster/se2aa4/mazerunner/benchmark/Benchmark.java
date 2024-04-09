@@ -1,9 +1,9 @@
-package ca.mcmaster.se2aa4.mazerunner.Benchmark;
+package ca.mcmaster.se2aa4.mazerunner.benchmark;
 
-import ca.mcmaster.se2aa4.mazerunner.Solver.MazeSolver;
-import ca.mcmaster.se2aa4.mazerunner.Parameters.Maze;
-import ca.mcmaster.se2aa4.mazerunner.Parameters.Path;
-import ca.mcmaster.se2aa4.mazerunner.Solver.SolverFactory;
+import ca.mcmaster.se2aa4.mazerunner.solver.MazeSolver;
+import ca.mcmaster.se2aa4.mazerunner.parameters.Maze;
+import ca.mcmaster.se2aa4.mazerunner.parameters.Path;
+import ca.mcmaster.se2aa4.mazerunner.solver.SolverFactory;
 import org.apache.commons.cli.CommandLine;
 
 public class Benchmark {

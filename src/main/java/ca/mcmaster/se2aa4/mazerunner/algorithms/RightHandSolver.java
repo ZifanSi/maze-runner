@@ -1,10 +1,10 @@
-package ca.mcmaster.se2aa4.mazerunner.Algorithms;
+package ca.mcmaster.se2aa4.mazerunner.algorithms;
 
-import ca.mcmaster.se2aa4.mazerunner.Parameters.Direction;
-import ca.mcmaster.se2aa4.mazerunner.Parameters.Maze;
-import ca.mcmaster.se2aa4.mazerunner.Parameters.Path;
-import ca.mcmaster.se2aa4.mazerunner.Parameters.Position;
-import ca.mcmaster.se2aa4.mazerunner.Solver.MazeSolver;
+import ca.mcmaster.se2aa4.mazerunner.parameters.Direction;
+import ca.mcmaster.se2aa4.mazerunner.parameters.Maze;
+import ca.mcmaster.se2aa4.mazerunner.parameters.Path;
+import ca.mcmaster.se2aa4.mazerunner.parameters.Position;
+import ca.mcmaster.se2aa4.mazerunner.solver.MazeSolver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

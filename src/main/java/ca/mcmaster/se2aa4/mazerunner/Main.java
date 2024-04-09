@@ -1,8 +1,8 @@
 package ca.mcmaster.se2aa4.mazerunner;
 
-import ca.mcmaster.se2aa4.mazerunner.Parameters.Maze;
-import ca.mcmaster.se2aa4.mazerunner.Parameters.Path;
-import ca.mcmaster.se2aa4.mazerunner.Benchmark.Benchmark;
+import ca.mcmaster.se2aa4.mazerunner.parameters.Maze;
+import ca.mcmaster.se2aa4.mazerunner.parameters.Path;
+import ca.mcmaster.se2aa4.mazerunner.benchmark.Benchmark;
 import org.apache.commons.cli.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
