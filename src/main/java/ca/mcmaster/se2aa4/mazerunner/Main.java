@@ -1,8 +1,9 @@
 package ca.mcmaster.se2aa4.mazerunner;
 
-import ca.mcmaster.se2aa4.mazerunner.parameters.Maze;
-import ca.mcmaster.se2aa4.mazerunner.parameters.Path;
-import ca.mcmaster.se2aa4.mazerunner.benchmark.Benchmark;
+import ca.mcmaster.se2aa4.mazerunner.mode.Default;
+import ca.mcmaster.se2aa4.mazerunner.parameter.Maze;
+import ca.mcmaster.se2aa4.mazerunner.parameter.Path;
+import ca.mcmaster.se2aa4.mazerunner.mode.Benchmark;
 import org.apache.commons.cli.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -24,10 +25,12 @@ public class Main {
                 logger.info("Validating path");
                 Path path = new Path(cmd.getOptionValue("p"));
                 System.out.println(maze.validatePath(path) ? "correct path" : "incorrect path");
-            } else {
-                // Run STEP #5: BENCHMARK & COMPARE
+            } else if (cmd.hasOption("baseline")) {
                 Benchmark benchmark = new Benchmark(cmd, maze);
                 benchmark.run();
+            } else {
+                Default normalRunner = new Default(cmd, maze);
+                normalRunner.run();
             }
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());

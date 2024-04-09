@@ -1,8 +1,8 @@
-package ca.mcmaster.se2aa4.mazerunner.benchmark;
+package ca.mcmaster.se2aa4.mazerunner.mode;
 
 import ca.mcmaster.se2aa4.mazerunner.solver.MazeSolver;
-import ca.mcmaster.se2aa4.mazerunner.parameters.Maze;
-import ca.mcmaster.se2aa4.mazerunner.parameters.Path;
+import ca.mcmaster.se2aa4.mazerunner.parameter.Maze;
+import ca.mcmaster.se2aa4.mazerunner.parameter.Path;
 import ca.mcmaster.se2aa4.mazerunner.solver.SolverFactory;
 import org.apache.commons.cli.CommandLine;
 
@@ -23,7 +23,6 @@ public class Benchmark {
         long startTime = System.currentTimeMillis();
         Path path = solver.solve(maze);
         long endTime = System.currentTimeMillis();
-        System.out.println(path.getFactorizedForm());
         System.out.printf("Time spent with %s method: %.2f ms\n", method, (endTime - startTime) / 1000.0);
 
         if (cmd.hasOption("baseline")) {
