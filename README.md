@@ -112,8 +112,9 @@ mosser@azrael A1-Template %
 ```
 
 #### Demo#1 - DepthFirstSearch(DFS)
-```
+``` 
 java -jar target/mazerunner.jar -i ./examples/tiny.maz.txt -method BFS
+
 3F L 4F R 3F
 ```
 ```
@@ -147,4 +148,13 @@ Step#3:Update the `visited` map and trace the path.
 (4,1)
 (5,1)
 (6,1)
+```
+
+#### mode#1 - Benchmark
+```
+java -jar target/mazerunner.jar -i ./examples/giant.maz.txt -method BFS -baseline righthand
+
+Time spent with BFS method: 0.03 ms
+Time spent with righthand method: 1.87 ms
+Speedup: 75.88 
 ```

@@ -91,7 +91,7 @@ public class BFSSolver implements MazeSolver {
             pathPositions.addFirst(new Position(current.x, current.y));
             current = current.parent;
         }
-        BFSBuilder builder = new BFSBuilder();  // Assume BFSBuilder can handle the list of positions directly
+        BFSBuilder builder = new BFSBuilder();
         return builder.buildPath(pathPositions);
     }
 }
