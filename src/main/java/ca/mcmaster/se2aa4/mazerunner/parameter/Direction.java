@@ -1,4 +1,4 @@
-package ca.mcmaster.se2aa4.mazerunner.parameters;
+package ca.mcmaster.se2aa4.mazerunner.parameter;
 
 public enum Direction {
     UP,

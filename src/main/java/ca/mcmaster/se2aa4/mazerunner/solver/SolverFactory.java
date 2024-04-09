@@ -1,8 +1,8 @@
 package ca.mcmaster.se2aa4.mazerunner.solver;
 
-import ca.mcmaster.se2aa4.mazerunner.algorithms.BFSSolver;
-import ca.mcmaster.se2aa4.mazerunner.algorithms.RightHandSolver;
-import ca.mcmaster.se2aa4.mazerunner.algorithms.TremauxSolver;
+import ca.mcmaster.se2aa4.mazerunner.algorithm.BFSSolver;
+import ca.mcmaster.se2aa4.mazerunner.algorithm.RightHandSolver;
+import ca.mcmaster.se2aa4.mazerunner.algorithm.TremauxSolver;
 
 public class SolverFactory {
 

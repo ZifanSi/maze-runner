@@ -1,4 +1,4 @@
-package ca.mcmaster.se2aa4.mazerunner.parameters;
+package ca.mcmaster.se2aa4.mazerunner.parameter;
 
 import java.util.ArrayList;
 import java.util.List;

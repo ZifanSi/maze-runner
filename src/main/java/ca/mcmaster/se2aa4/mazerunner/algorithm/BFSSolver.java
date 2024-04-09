@@ -1,11 +1,11 @@
-package ca.mcmaster.se2aa4.mazerunner.algorithms;
+package ca.mcmaster.se2aa4.mazerunner.algorithm;
 
-import ca.mcmaster.se2aa4.mazerunner.graphParameters.PathBuilder;
-import ca.mcmaster.se2aa4.mazerunner.parameters.Maze;
+import ca.mcmaster.se2aa4.mazerunner.builder.BFSBuilder;
+import ca.mcmaster.se2aa4.mazerunner.parameter.Maze;
 import ca.mcmaster.se2aa4.mazerunner.solver.MazeSolver;
-import ca.mcmaster.se2aa4.mazerunner.parameters.Path;
-import ca.mcmaster.se2aa4.mazerunner.parameters.Position;
-import ca.mcmaster.se2aa4.mazerunner.graphParameters.Node;
+import ca.mcmaster.se2aa4.mazerunner.parameter.Path;
+import ca.mcmaster.se2aa4.mazerunner.parameter.Position;
+import ca.mcmaster.se2aa4.mazerunner.graph.Node;
 
 import java.util.*;
 /*
@@ -91,6 +91,7 @@ public class BFSSolver implements MazeSolver {
             pathPositions.addFirst(new Position(current.x, current.y));
             current = current.parent;
         }
-        return PathBuilder.buildPath(pathPositions);
+        BFSBuilder builder = new BFSBuilder();  // Assume BFSBuilder can handle the list of positions directly
+        return builder.buildPath(pathPositions);
     }
 }
