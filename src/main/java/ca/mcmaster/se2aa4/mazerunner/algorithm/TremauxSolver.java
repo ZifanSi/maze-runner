@@ -4,7 +4,6 @@ import ca.mcmaster.se2aa4.mazerunner.parameter.Direction;
 import ca.mcmaster.se2aa4.mazerunner.parameter.Maze;
 import ca.mcmaster.se2aa4.mazerunner.parameter.Path;
 import ca.mcmaster.se2aa4.mazerunner.parameter.Position;
-import ca.mcmaster.se2aa4.mazerunner.solver.MazeSolver;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

@@ -1,4 +1,4 @@
-package ca.mcmaster.se2aa4.mazerunner.solver;
+package ca.mcmaster.se2aa4.mazerunner.algorithm;
 
 import ca.mcmaster.se2aa4.mazerunner.parameter.Maze;
 import ca.mcmaster.se2aa4.mazerunner.parameter.Path;

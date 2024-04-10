@@ -2,7 +2,6 @@ package ca.mcmaster.se2aa4.mazerunner.algorithm;
 
 import ca.mcmaster.se2aa4.mazerunner.builder.BFSBuilder;
 import ca.mcmaster.se2aa4.mazerunner.parameter.Maze;
-import ca.mcmaster.se2aa4.mazerunner.solver.MazeSolver;
 import ca.mcmaster.se2aa4.mazerunner.parameter.Path;
 import ca.mcmaster.se2aa4.mazerunner.parameter.Position;
 import ca.mcmaster.se2aa4.mazerunner.graph.Node;
@@ -11,7 +10,6 @@ import java.util.*;
 /*
 Cite[1]: https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
 Cite[2]: https://algs4.cs.princeton.edu/41graph/Graph.java.html
-See my step-by-step illustration in README
 */
 
 public class BFSSolver implements MazeSolver {

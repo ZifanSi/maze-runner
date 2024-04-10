@@ -1,12 +1,12 @@
 package ca.mcmaster.se2aa4.mazerunner.mode;
 
-import ca.mcmaster.se2aa4.mazerunner.solver.MazeSolver;
+import ca.mcmaster.se2aa4.mazerunner.algorithm.MazeSolver;
 import ca.mcmaster.se2aa4.mazerunner.parameter.Maze;
 import ca.mcmaster.se2aa4.mazerunner.parameter.Path;
-import ca.mcmaster.se2aa4.mazerunner.solver.SolverFactory;
+import ca.mcmaster.se2aa4.mazerunner.factory.SolverFactory;
 import org.apache.commons.cli.CommandLine;
 
-public class Benchmark {
+public class Benchmark implements Runner {
 
     private final CommandLine cmd;
     private final Maze maze;

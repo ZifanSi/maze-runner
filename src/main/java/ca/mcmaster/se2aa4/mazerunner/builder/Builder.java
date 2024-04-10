@@ -17,14 +17,14 @@ public abstract class Builder {
         }
     }
 
-    protected static char determineTurn(Direction d, Direction d_target) {
+    protected static char getTurn(Direction d, Direction d_target) {
         if (d == Direction.RIGHT) {
             return d_target == Direction.UP ? 'L' : 'R';
         } else if (d == Direction.LEFT) {
             return d_target == Direction.DOWN ? 'L' : 'R';
         } else if (d == Direction.UP) {
             return d_target == Direction.LEFT ? 'L' : 'R';
-        } else { // d == Direction.DOWN
+        } else {
             return d_target == Direction.RIGHT ? 'L' : 'R';
         }
     }

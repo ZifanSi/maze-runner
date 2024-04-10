@@ -30,7 +30,7 @@ public class BFSBuilder extends Builder {
                     }
                     forwardCount = 1;
                 }
-                path.addStep(determineTurn(currentDirection, newDirection));
+                path.addStep(getTurn(currentDirection, newDirection));
             }
 
             currentDirection = newDirection;
