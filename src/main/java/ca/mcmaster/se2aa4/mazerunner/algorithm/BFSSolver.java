@@ -9,7 +9,8 @@ import ca.mcmaster.se2aa4.mazerunner.graph.Node;
 
 import java.util.*;
 /*
-Cite: https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
+Cite[1]: https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
+Cite[2]: https://algs4.cs.princeton.edu/41graph/Graph.java.html
 See my step-by-step illustration in README
 */
 
