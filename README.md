@@ -154,7 +154,11 @@ Step#3:Update the `visited` map and trace the path.
 ```
 java -jar target/mazerunner.jar -i ./examples/giant.maz.txt -method BFS -baseline righthand
 
-Time spent with BFS method: 0.03 ms
-Time spent with righthand method: 1.87 ms
-Speedup: 75.88 
+Time spent loading the maze: 0.01 ms
+Time spent with BFS method: 24.00 ms
+Instructions (optimized): 320
+Time spent with righthand method: 1929.00 ms
+Instructions (baseline): 24282
+Speedup: 75.88
+
 ```

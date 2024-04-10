@@ -19,14 +19,18 @@ public class Main {
         try {
             CommandLine cmd = parser.parse(getParserOptions(), args);
             String filePath = cmd.getOptionValue("i");
+            long loadStartTime = System.currentTimeMillis();
             Maze maze = new Maze(filePath);
+            long loadEndTime = System.currentTimeMillis();
+            double mazeLoadTime = (loadEndTime - loadStartTime) / 1000.0;
 
             if (cmd.hasOption("p")) {
                 logger.info("Validating path");
                 Path path = new Path(cmd.getOptionValue("p"));
                 System.out.println(maze.validatePath(path) ? "correct path" : "incorrect path");
             } else if (cmd.hasOption("baseline")) {
-                Benchmark benchmark = new Benchmark(cmd, maze);
+
+                Benchmark benchmark = new Benchmark(cmd, maze, mazeLoadTime);
                 benchmark.run();
             } else {
                 Default normalRunner = new Default(cmd, maze);

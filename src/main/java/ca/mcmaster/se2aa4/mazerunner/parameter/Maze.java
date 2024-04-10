@@ -161,4 +161,6 @@ public class Maze {
 
         return pos.equals(endPos);
     }
+
+
 }
