@@ -15,7 +15,7 @@ class MazeTest {
 
     @BeforeEach
     void setUp() throws Exception {
-        String filePath = Paths.get("src/test/resources/examples/giant.maz.txt").toString();
+        String filePath = Paths.get("./examples/tiny.maz.txt").toString();
         maze = new Maze(filePath);
     }
 
