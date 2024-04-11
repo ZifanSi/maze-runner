@@ -22,7 +22,7 @@ public class Main {
             long loadStartTime = System.currentTimeMillis();
             Maze maze = new Maze(filePath);
             long loadEndTime = System.currentTimeMillis();
-            double mazeLoadTime = (loadEndTime - loadStartTime) / 1000.0;
+            double mazeLoadTime = (loadEndTime - loadStartTime) / 1.0;
 
             if (cmd.hasOption("p")) {
                 logger.info("Validating path");
