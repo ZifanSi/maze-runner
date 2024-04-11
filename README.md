@@ -6,7 +6,8 @@
 * **Course Title**: Software Design I - Introduction to Software Development
 * Term: *Level II - Winter 2024*
 
-
+## Citation
+Algorithms, 4th Edition https://algs4.cs.princeton.edu/44sp/AcyclicSP.java.html
 
 ## Business Logic Specification
 
