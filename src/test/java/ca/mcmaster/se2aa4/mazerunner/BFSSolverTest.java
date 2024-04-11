@@ -7,6 +7,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ Goal: Basic Functionality
+ The essential parts of the Maze Runner project are the pathfinding algorithms (BFSSolver, RightHandSolver, TremauxSolver).
+ These are essential for the application's main purpose, which is to find a path through the maze.
+ Therefore, testing these components to ensure they accurately find the path, handle “contradicted”  cases, and operate efficiently on various maze sizes.
+ **/
+
 class BFSSolverTest {
 
     @Test

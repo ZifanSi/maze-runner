@@ -7,7 +7,11 @@ import ca.mcmaster.se2aa4.mazerunner.factory.SolverFactory;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+/**
+Goal: Error Handling
+ Ensuring the runner handles invalid inputs or unsolvable mazes is important.
+ Tests should cover scenarios like invalid file paths, improperly formatted maze files, mazes without a valid start or end point, and mazes that are unsolvable.
+**/
 class SolverFactoryTest {
 
     @Test
@@ -26,5 +30,20 @@ class SolverFactoryTest {
     void testCreateTremauxSolver() throws Exception {
         MazeSolver solver = SolverFactory.createSolver("tremaux");
         assertTrue(solver instanceof TremauxSolver, "Should create a TremauxSolver instance.");
+    }
+
+    @Test
+    void testCreateSolverWithUnsupportedType() {
+        assertThrows(Exception.class, () -> SolverFactory.createSolver("unsupported"), "Should throw an exception for unsupported solver types.");
+    }
+
+    @Test
+    void testCreateSolverWithEmptyString() {
+        assertThrows(Exception.class, () -> SolverFactory.createSolver(""), "Should throw an exception for empty solver type.");
+    }
+
+    @Test
+    void testCreateSolverWithNull() {
+        assertThrows(Exception.class, () -> SolverFactory.createSolver(null), "Should throw an exception for null solver type.");
     }
 }
