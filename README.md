@@ -118,7 +118,7 @@ java -jar target/mazerunner.jar -i ./examples/tiny.maz.txt -method BFS
 3F L 4F R 3F
 ```
 ```
-Consider the example tiny.maz.txt:
+Consider the sample tiny.maz.txt:
 
 #######
 #      
@@ -132,10 +132,10 @@ Step#1. get start/end coordinates by existing method. Start: (0,5), end: (6,1)
 
 Step#2: Build a queue q and a map visited to track visited nodes. Create a node object and add to q.
 also add to visited with null parent.starting with (0,5), remove a node from q, check if is (6,1).
-if yes, return the path tracing back from this node.
-if not, add neighbou node 
+if yes, path trace from (0,5).
+if not, add neighbour node.
 
-Step#3:Update the `visited` map and trace the path.
+Step#3: Update the `visited` map.
 
 (0,5)
 (1,5)
@@ -148,12 +148,14 @@ Step#3:Update the `visited` map and trace the path.
 (4,1)
 (5,1)
 (6,1)
+Apply BFSBuilder >> 3F L 4F R 3F
 ```
 
 #### mode#1 - Benchmark
 ```
 java -jar target/mazerunner.jar -i ./examples/giant.maz.txt -method BFS -baseline righthand
-
+```
+```
 Time spent loading the maze: 0.01 ms
 Time spent with BFS method: 24.00 ms
 Instructions (optimized): 320
