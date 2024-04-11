@@ -1,10 +1,12 @@
 # Assignment A1 - Maze Runner
 
-* **Student**: [FIRSTNAME LASTNAME](MACID@mcmaster.ca)
+* **Authors**: [Zifan Si](siz@mcmaster.ca), [Alexandre Lachance](alexandrelachance@me.com)
 * **Program**: B. Eng. In Software Engineering
 * **Course code**: SFWRENG 2AA4
 * **Course Title**: Software Design I - Introduction to Software Development
 * Term: *Level II - Winter 2024*
+
+
 
 ## Business Logic Specification
 
@@ -111,47 +113,14 @@ inccorrect path
 mosser@azrael A1-Template %
 ```
 
-#### Demo#1 - DepthFirstSearch(DFS)
+#### Graph-based Algorithm #1 - DepthFirstSearch(DFS)
 ``` 
 java -jar target/mazerunner.jar -i ./examples/tiny.maz.txt -method BFS
 
 3F L 4F R 3F
 ```
-```
-Consider the sample tiny.maz.txt:
 
-#######
-#      
-### ###
-#     #
-### ###
-      #
-#######
-
-Step#1. get start/end coordinates by existing method. Start: (0,5), end: (6,1)
-
-Step#2: Build a queue q and a map visited to track visited nodes. Create a node object and add to q.
-also add to visited with null parent.starting with (0,5), remove a node from q, check if is (6,1).
-if yes, path trace from (0,5).
-if not, add neighbour node.
-
-Step#3: Update the `visited` map.
-
-(0,5)
-(1,5)
-(2,5)
-(3,5)
-(3,4)
-(3,3)
-(3,2)
-(3,1)
-(4,1)
-(5,1)
-(6,1)
-Apply BFSBuilder >> 3F L 4F R 3F
-```
-
-#### mode#1 - Benchmark
+#### Mode #1 - Benchmark
 ```
 java -jar target/mazerunner.jar -i ./examples/giant.maz.txt -method BFS -baseline righthand
 ```
