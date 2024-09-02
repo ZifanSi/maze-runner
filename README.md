@@ -1,10 +1,6 @@
-# Assignment A1 - Maze Runner
+# Maze Runner
 
-* **Authors**: [Zifan Si](siz@mcmaster.ca), [Alexandre Lachance](alexandrelachance@me.com)
-* **Program**: B. Eng. In Software Engineering
-* **Course code**: SFWRENG 2AA4
-* **Course Title**: Software Design I - Introduction to Software Development
-* Term: *Level II - Winter 2024*
+* **Authors**: [Zifan Si](siz@mcmaster.ca)
 
 ## Citation
 Algorithms, 4th Edition https://algs4.cs.princeton.edu/44sp/AcyclicSP.java.html
