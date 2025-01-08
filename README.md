@@ -1,4 +1,5 @@
 # Maze Runner
+Rated as "One of the best I've seen" by Professor
 
 * **Authors**: [Zifan Si](siz@mcmaster.ca)
 
